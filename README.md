@@ -29,6 +29,12 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 Getting Started
 ---------------
 
+rvm use ruby-2.2.0@certificate --create
+
+bundle # install missing gems
+bundle exec rake db:create
+bundle exec rake db:migrate
+
 Documentation and Support
 -------------------------
 
