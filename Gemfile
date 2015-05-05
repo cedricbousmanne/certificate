@@ -7,6 +7,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'country_select', '~> 2.2.0'
+gem 'bh', '~> 1.2'
+gem 'rails-i18n'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -32,6 +35,9 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'powder'
+
+  gem 'twitter-bootswatch-rails', '~> 3.3.2'
+  gem 'twitter-bootswatch-rails-fontawesome'
 end
 group :development, :test do
   gem 'pry-rails'

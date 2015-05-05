@@ -1,0 +1,15 @@
+.page-header
+  %h1 New residence report
+
+= simple_form_for([@client, @residence_report]) do |f|
+  = f.input :address
+  = f.input :zipcode
+  = f.input :city
+  = f.input :country_code
+  = f.input :unit
+  = f.input :construction_year
+  = f.input :report_date
+  = f.input :energy_performance
+  = f.input :thermal_insulation
+
+  = f.button :submit

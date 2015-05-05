@@ -1,0 +1,14 @@
+.page-header
+  .pull-right
+    = link_to "New client", new_client_path, class: 'btn btn-success'
+  %h1 Clients management
+
+%table.table
+  %thead
+    %td
+      %th Full name
+      %th Address
+      %th
+        // actions
+  %tbody
+    = render @clients

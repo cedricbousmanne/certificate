@@ -1,1 +1,8 @@
 fr:
+  activerecord:
+    errors:
+      models:
+        estate:
+          attributes:
+            internal_id:
+              blank: "Veuillez préciser la référence interne"

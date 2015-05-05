@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  zipcode: MyString
+  city: MyString
+  country_code: MyString
+  unit: 1
+  construction_year: 1
+  report_date: 2015-05-05
+  energy_performance: 1.5
+  energy_class: MyString
+  thermal_insulation: 1.5
+  thermal_class: MyString
+
+two:
+  address: MyString
+  zipcode: MyString
+  city: MyString
+  country_code: MyString
+  unit: 1
+  construction_year: 1
+  report_date: 2015-05-05
+  energy_performance: 1.5
+  energy_class: MyString
+  thermal_insulation: 1.5
+  thermal_class: MyString

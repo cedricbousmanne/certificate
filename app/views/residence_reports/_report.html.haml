@@ -1,0 +1,40 @@
+.row
+  .col-xs-12
+    .well.panel.panel-default
+      .panel-body
+        .row
+          .col-xs-12
+            %h2= @residence_report.client.fullname
+            .col-xs-6
+              %address
+                = @residence_report.address
+                %br
+                = @residence_report.zipcode
+                = @residence_report.city
+                %br
+                = @residence_report.country_code
+            .col-xs-6
+              %dl
+                %dt
+                  = t('unit', scope: 'simple_form.labels.residence_report')
+                %dd
+                  = @residence_report.unit
+                %dt
+                  = t('construction_year', scope: 'simple_form.labels.residence_report')
+                %dd
+                  = @residence_report.construction_year
+                %dt
+                  = t('energy_performance', scope: 'simple_form.labels.residence_report')
+                %dd
+                  = @residence_report.energy_performance
+                %dt
+                  = t('thermal_insulation', scope: 'simple_form.labels.residence_report')
+                %dd
+                  = @residence_report.thermal_insulation
+          .clearfix
+    .col-xs-6
+      %h5= t('energy_class', scope: 'simple_form.labels.residence_report')
+      = @residence_report.energy_class
+    .col-xs-6
+      %h5= t('thermal_class', scope: 'simple_form.labels.residence_report')
+      = @residence_report.thermal_class

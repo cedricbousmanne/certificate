@@ -11,7 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501180818) do
+ActiveRecord::Schema.define(version: 20150505125708) do
+
+  create_table "clients", force: :cascade do |t|
+    t.string   "fullname",     limit: 255
+    t.string   "address",      limit: 255
+    t.string   "zipcode",      limit: 255
+    t.string   "city",         limit: 255
+    t.string   "country_code", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "company_id",   limit: 4
+  end
+
+  add_index "clients", ["company_id"], name: "index_clients_on_company_id", using: :btree
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "residence_reports", force: :cascade do |t|
+    t.string   "address",            limit: 255
+    t.string   "zipcode",            limit: 255
+    t.string   "city",               limit: 255
+    t.string   "country_code",       limit: 2
+    t.integer  "unit",               limit: 2
+    t.integer  "construction_year",  limit: 4
+    t.date     "report_date"
+    t.float    "energy_performance", limit: 24
+    t.string   "energy_class",       limit: 1
+    t.float    "thermal_insulation", limit: 24
+    t.string   "thermal_class",      limit: 1
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "client_id",          limit: 4
+  end
+
+  add_index "residence_reports", ["client_id"], name: "index_residence_reports_on_client_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -39,8 +77,10 @@ ActiveRecord::Schema.define(version: 20150501180818) do
     t.integer  "invited_by_id",          limit: 4
     t.string   "invited_by_type",        limit: 255
     t.integer  "invitations_count",      limit: 4,   default: 0
+    t.integer  "company_id",             limit: 4
   end
 
+  add_index "users", ["company_id"], name: "index_users_on_company_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
   add_index "users", ["invitations_count"], name: "index_users_on_invitations_count", using: :btree

@@ -1,0 +1,48 @@
+fr:
+  simple_form:
+    "yes": 'Oui'
+    "no": 'Non'
+    required:
+      text: 'requis'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Veuillez corriger les problèmes ci-dessous:"
+    options:
+      estate:
+        transaction_type:
+          sale: "Vente"
+          rental: "Location"
+        estate_type:
+          house: "Maison"
+          flat: "Appartement"
+          field: "Terrain"
+          commercial: "Espace commercial"
+          garage: "Garage"
+          building: "Immeuble"
+    labels:
+      defaults:
+        password: 'Mot de passe'
+        address: 'Adresse'
+        zipcode: 'Code postal'
+        city: 'Ville'
+        country_code: 'Pays'
+      residence_report:
+        unit: 'Unité'
+        construction_year: 'Année de construction'
+        energy_performance: 'Performance énergétique'
+        thermal_insulation: 'Isolation thermique'
+        energy_class: 'Classe énergétique'
+        thermal_class: 'Classe thermique'
+        report_date: 'Date du rapport'
+
+      visitation:
+        user_id: "Attribuer à"
+        note: "Note"
+  helpers:
+    submit:
+      estate:
+        create: "Ajouter ce bien"
+        update: "Modifier ce bien"
