@@ -11,6 +11,7 @@ gem 'country_select', '~> 2.2.0'
 gem 'bh', '~> 1.2'
 gem 'rails-i18n'
 gem 'therubyracer'
+gem 'fontawesome-rails', '~> 4.0.3.0'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

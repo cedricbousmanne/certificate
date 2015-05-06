@@ -1,0 +1,27 @@
+.container{:style => "margin-top:80px"}
+  .col-md-4.col-md-offset-4
+    .panel.panel-default
+      = devise_error_messages!
+      .panel-body
+        = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f|
+          .form-group
+            = f.label :email, class: 'sr-only'
+            .input-group
+              %span.input-group-addon
+                %i.fa.fa-user.fa-fw
+              = f.email_field :email, class: 'form-control', placeholder: 'Email'
+          .form-group
+            = f.label :password, class: 'sr-only'
+            .input-group
+              %span.input-group-addon
+                %i.fa.fa-lock.fa-fw
+              = f.password_field :password, class: 'form-control', placeholder: 'Password'
+            - if devise_mapping.recoverable?
+              = link_to "Forgot password?", new_password_path(resource_name), class: 'pull-right small'
+          - if devise_mapping.rememberable?
+            .checkbox
+              %label
+                %input{:type => "checkbox"}/
+                = f.check_box :remember_me
+                Stay signed in
+          = f.submit 'Sign in', :class => 'btn btn-success btn-sm'

@@ -15,10 +15,11 @@
 
   %body
 
-    %header.mb20
-      = render 'layouts/navigation'
+    %header
     %main.mt50.mb50{:role => "main"}
       .container
+        .ac
+          = logo('100', 'center')
         = render 'layouts/messages'
         = yield
 

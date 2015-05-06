@@ -1,0 +1,34 @@
+/* Yeti
+ * Bootswatch
+ *= require_self
+ *= require yeti/loader
+ *= require yeti/bootswatch
+ *= require fontawesome
+ *= require utils
+*/
+
+h1{
+  &.logo{
+    background: #EB540A !important;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border-radius: 50px;
+    display: table;
+    &.center{
+      margin-right: auto;
+      margin-left: auto;
+    }
+    i{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+
+header{
+  .navbar-nav{
+    margin-top: 10px;
+  }
+}
