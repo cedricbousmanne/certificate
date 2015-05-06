@@ -26,6 +26,12 @@ fr:
       defaults:
         password: 'Mot de passe'
 
+      client:
+        fullname: 'Nom complet'
+        address: 'Adresse'
+        zipcode: 'Code postal'
+        city: 'Ville'
+        country_code: 'Pays'
       residence_report:
         address: 'Adresse'
         zipcode: 'Code postal'
@@ -44,6 +50,6 @@ fr:
         note: "Note"
   helpers:
     submit:
-      estate:
-        create: "Ajouter ce bien"
-        update: "Modifier ce bien"
+      client:
+        create: "Ajouter ce client"
+        update: "Modifier ce client"

@@ -1,10 +1,12 @@
 .page-header
-  %h1 Gestion des rapports
+  - if @client
+    %h1 Gestion des rapports - Client #{@client.fullname}
+  - else
+    %h1 Gestion des rapports
 
 %table.table.table-condensed.table-bordered
   %thead
     %tr
-      %th= t('address', scope: 'simple_form.labels.residence_report')
       %th= t('zipcode', scope: 'simple_form.labels.residence_report')
       %th= t('city', scope: 'simple_form.labels.residence_report')
       %th= t('country_code', scope: 'simple_form.labels.residence_report')
@@ -16,5 +18,7 @@
       %th= t('thermal_insulation', scope: 'simple_form.labels.residence_report')
       %th= t('thermal_class', scope: 'simple_form.labels.residence_report')
       %th= t('client_', scope: 'simple_form.labels.residence_report')
+      %th
+        / actions
   %tbody
     = render @residence_reports

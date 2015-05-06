@@ -12,6 +12,7 @@ gem 'bh', '~> 1.2'
 gem 'rails-i18n'
 gem 'therubyracer'
 gem 'fontawesome-rails', '~> 4.0.3.0'
+gem 'prawn', '~> 2.0.1'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

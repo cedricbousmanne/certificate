@@ -1,5 +1,4 @@
 %tr
-  %td= residence_report.address
   %td= residence_report.zipcode
   %td= residence_report.city
   %td= residence_report.country_code
@@ -12,4 +11,16 @@
   %td= residence_report.thermal_insulation
   %td{ class: "class-#{residence_report.thermal_class.downcase}"}
     = residence_report.thermal_class
-  %td= residence_report.client_id
+  %td
+    %a{href: client_residence_reports_path(residence_report.client) }
+      = residence_report.client.fullname
+  %td.col-xs-2
+    = dropdown 'Actions', split: true, size: :small do
+      = link_to client_residence_report_path(residence_report.client, residence_report) do
+        %i.fa.fa-list
+        Voir
+      = link_to client_residence_report_path(residence_report.client, residence_report, format: :pdf) do
+        %i.fa.fa-file-text-o
+        Exporter
+
+

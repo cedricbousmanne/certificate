@@ -1,7 +1,14 @@
 %tr
   %td= client.fullname
   %td= client.address
-  %td
-    = link_to new_client_residence_report_path(client), class: 'btn btn-default btn-xs' do
-      %i.fa.fa-plus
-      Nouveau rapport
+  %td.col-xs-2
+    = dropdown 'Actions', split: true, size: :small do
+      = link_to edit_client_path(client) do
+        %i.fa.fa-pencil
+        Modifier
+      = link_to new_client_residence_report_path(client) do
+        %i.fa.fa-plus
+        Nouveau rapport
+      = link_to client_residence_reports_path(client) do
+        %i.fa.fa-list
+        Liste des rapports
