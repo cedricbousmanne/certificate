@@ -1,6 +1,7 @@
-%td
+%tr
   %td= client.fullname
   %td= client.address
   %td
-    = link_to new_client_residence_report_path(client) do
-      New Residence Report
+    = link_to new_client_residence_report_path(client), class: 'btn btn-default btn-xs' do
+      %i.fa.fa-plus
+      Nouveau rapport

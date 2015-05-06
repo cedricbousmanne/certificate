@@ -25,11 +25,12 @@ fr:
     labels:
       defaults:
         password: 'Mot de passe'
+
+      residence_report:
         address: 'Adresse'
         zipcode: 'Code postal'
         city: 'Ville'
         country_code: 'Pays'
-      residence_report:
         unit: 'Unité'
         construction_year: 'Année de construction'
         energy_performance: 'Performance énergétique'

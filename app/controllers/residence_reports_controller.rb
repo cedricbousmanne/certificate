@@ -1,5 +1,10 @@
 class ResidenceReportsController < ProtectedController
-  before_action :get_client
+  before_action :get_client, except: :index
+
+  def index
+    @residence_reports = ResidenceReport.all
+  end
+
   def new
     @residence_report = @client.residence_reports.new
   end

@@ -1,0 +1,15 @@
+%tr
+  %td= residence_report.address
+  %td= residence_report.zipcode
+  %td= residence_report.city
+  %td= residence_report.country_code
+  %td= residence_report.unit
+  %td= residence_report.construction_year
+  %td= residence_report.report_date
+  %td= residence_report.energy_performance
+  %td{ class: "class-#{residence_report.energy_class.downcase}"}
+    = residence_report.energy_class
+  %td= residence_report.thermal_insulation
+  %td{ class: "class-#{residence_report.thermal_class.downcase}"}
+    = residence_report.thermal_class
+  %td= residence_report.client_id
