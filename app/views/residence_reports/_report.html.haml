@@ -34,7 +34,11 @@
           .clearfix
     .col-xs-6
       %h5= t('energy_class', scope: 'simple_form.labels.residence_report')
-      = @residence_report.energy_class
+      %div{class: "square square50 class-#{@residence_report.energy_class.downcase}"}
+        %span
+          = @residence_report.energy_class
     .col-xs-6
       %h5= t('thermal_class', scope: 'simple_form.labels.residence_report')
-      = @residence_report.thermal_class
+      %div{class: "square square50 class-#{@residence_report.thermal_class.downcase}"}
+        %span
+          = @residence_report.thermal_class
